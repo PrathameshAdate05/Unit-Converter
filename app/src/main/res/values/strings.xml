@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Unit-Converter</string>
     <string name="splash_title">Unit Converter</string>
+    <string name="card_title_temperature">Temperature</string>
+    <string name="card_title_time">Time</string>
+    <string name="card_title_weight">Weight</string>
+    <string name="card_title_length">Length</string>
 </resources>

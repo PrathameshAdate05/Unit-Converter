@@ -44,59 +44,64 @@ public class Length extends AppCompatActivity implements AdapterView.OnItemSelec
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (input == output)
-                    TVOutput.setText(ETInput.getText());
 
-                // kilometer to other
-                else if (input == 0 && output == 1)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 1000;
-                else if (input == 0 && output == 2)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * Constants.MILLIMETER;
-                else if (input == 0 && output == 3)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * Constants.FEET;
-                else if (input == 0 && output == 4)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * Constants.INCH;
+                if (ETInput.getText().toString().equals("")){
+                    ETInput.setError("Enter Input");
+                    return;
+                }
+                else{
+                    if (input == output)
+                        answer = Double.parseDouble(ETInput.getText().toString());
+                    // kilometer to other
+                    else if (input == 0 && output == 1)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 1000;
+                    else if (input == 0 && output == 2)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * Constants.MILLIMETER;
+                    else if (input == 0 && output == 3)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * Constants.FEET;
+                    else if (input == 0 && output == 4)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * Constants.INCH;
 
-                // meter to other
-                else if (input == 1 && output == 0)
-                    answer = Double.parseDouble(ETInput.getText().toString()) / 1000;
-                else if (input == 1 && output == 2)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 1000;
-                else if (input == 1 && output == 3)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 3.28084;
-                else if (input == 1 && output == 4)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 39.3701;
+                        // meter to other
+                    else if (input == 1 && output == 0)
+                        answer = Double.parseDouble(ETInput.getText().toString()) / 1000;
+                    else if (input == 1 && output == 2)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 1000;
+                    else if (input == 1 && output == 3)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 3.28084;
+                    else if (input == 1 && output == 4)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 39.3701;
 
-                // millimeter to other
-                else if (input == 2 && output == 0)
-                    answer = Double.parseDouble(ETInput.getText().toString()) / Constants.MILLIMETER;
-                else if (input == 2 && output == 1)
-                    answer = Double.parseDouble(ETInput.getText().toString()) / 1000;
-                else if (input == 2 && output == 3)
-                    answer = Double.parseDouble(ETInput.getText().toString()) / 305;
-                else if (input == 2 && output == 4)
-                    answer = Double.parseDouble(ETInput.getText().toString()) / 25.4;
+                        // millimeter to other
+                    else if (input == 2 && output == 0)
+                        answer = Double.parseDouble(ETInput.getText().toString()) / Constants.MILLIMETER;
+                    else if (input == 2 && output == 1)
+                        answer = Double.parseDouble(ETInput.getText().toString()) / 1000;
+                    else if (input == 2 && output == 3)
+                        answer = Double.parseDouble(ETInput.getText().toString()) / 305;
+                    else if (input == 2 && output == 4)
+                        answer = Double.parseDouble(ETInput.getText().toString()) / 25.4;
 
-                // feet to others
-                else if (input == 3 && output == 0)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 0.000305;
-                else if (input == 3 && output == 1)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 0.3048;
-                else if (input == 3 && output == 2)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 304.8;
-                else if (input == 3 && output == 4)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 12;
+                        // feet to others
+                    else if (input == 3 && output == 0)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 0.000305;
+                    else if (input == 3 && output == 1)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 0.3048;
+                    else if (input == 3 && output == 2)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 304.8;
+                    else if (input == 3 && output == 4)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 12;
 
-                // inch to others
-                else if (input == 4 && output == 0)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 2.54E-5;
-                else if (input == 4 && output == 1)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 0.0254;
-                else if (input == 4 && output == 2)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 25.4;
-                else if (input == 4 && output == 3)
-                    answer = Double.parseDouble(ETInput.getText().toString()) * 0.0833;
-
+                        // inch to others
+                    else if (input == 4 && output == 0)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 2.54E-5;
+                    else if (input == 4 && output == 1)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 0.0254;
+                    else if (input == 4 && output == 2)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 25.4;
+                    else if (input == 4 && output == 3)
+                        answer = Double.parseDouble(ETInput.getText().toString()) * 0.0833;
+                }
                 TVOutput.setText(String.valueOf(answer));
             }
         });

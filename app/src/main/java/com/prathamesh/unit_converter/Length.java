@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class Length extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner inputSpinner, outputSpinner;
-    int input, output;
+    int input = 0, output = 0;
     Button convert;
     Double answer;
     TextView TVOutput;

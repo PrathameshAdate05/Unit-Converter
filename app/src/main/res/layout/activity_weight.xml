@@ -6,4 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".Weight">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
+                android:text="@string/card_title_weight"
+                android:textSize="30sp" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_Input_Weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayoutWeight">
+
+
+        <EditText
+            android:id="@+id/ET_InputWeight"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Input"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Spinner
+            android:id="@+id/SpinnerInputWeight"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/border" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_output_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_Input_Weight">
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0.0"
+            android:id="@+id/TV_Output_Weight"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:textAlignment="gravity"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/SpinnerOutputWeight"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/border" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BTN_ConvertWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Convert"
+        android:textSize="18sp"
+        android:fontFamily="@font/aladin"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_output_weight" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

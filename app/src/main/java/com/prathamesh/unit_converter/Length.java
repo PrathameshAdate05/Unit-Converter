@@ -27,11 +27,11 @@ public class Length extends AppCompatActivity implements AdapterView.OnItemSelec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_length);
 
-        inputSpinner = findViewById(R.id.SpinnerInputTemperature);
-        outputSpinner = findViewById(R.id.SpinnerOutputTemperature);
-        convert = findViewById(R.id.BTN_ConvertTemperature);
-        TVOutput = findViewById(R.id.TV_Output_Temperature);
-        ETInput = findViewById(R.id.ET_InputTemperature);
+        inputSpinner = findViewById(R.id.SpinnerInputTime);
+        outputSpinner = findViewById(R.id.SpinnerOutputTime);
+        convert = findViewById(R.id.BTN_ConvertTime);
+        TVOutput = findViewById(R.id.TV_Output_Time);
+        ETInput = findViewById(R.id.ET_InputTime);
 
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,lengths);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -109,7 +109,7 @@ public class Length extends AppCompatActivity implements AdapterView.OnItemSelec
     }
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        if (adapterView.getId() == R.id.SpinnerInputTemperature)
+        if (adapterView.getId() == R.id.SpinnerInputTime)
             input = i;
         else
             output = i;

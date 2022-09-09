@@ -27,11 +27,11 @@ public class Temperature extends AppCompatActivity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperature);
 
-        TVOutput = findViewById(R.id.TV_Output_Temperature);
-        ETInput = findViewById(R.id.ET_InputTemperature);
-        inputSpinner = findViewById(R.id.SpinnerInputTemperature);
-        outputSpinner = findViewById(R.id.SpinnerOutputTemperature);
-        BTNConvert = findViewById(R.id.BTN_ConvertTemperature);
+        TVOutput = findViewById(R.id.TV_Output_Time);
+        ETInput = findViewById(R.id.ET_InputTime);
+        inputSpinner = findViewById(R.id.SpinnerInputTime);
+        outputSpinner = findViewById(R.id.SpinnerOutputTime);
+        BTNConvert = findViewById(R.id.BTN_ConvertTime);
 
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,temperatures);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -77,7 +77,7 @@ public class Temperature extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        if (adapterView.getId() == R.id.SpinnerInputTemperature)
+        if (adapterView.getId() == R.id.SpinnerInputTime)
             input = i;
         else
             output = i;

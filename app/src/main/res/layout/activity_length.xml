@@ -7,7 +7,7 @@
     tools:context=".Length">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayoutTemperature"
+        android:id="@+id/appBarLayoutTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_Input_Temperature"
+        android:id="@+id/linearLayout_Input_Time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
@@ -37,11 +37,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayoutTemperature">
+        app:layout_constraintTop_toBottomOf="@id/appBarLayoutTime">
 
 
         <EditText
-            android:id="@+id/ET_InputTemperature"
+            android:id="@+id/ET_InputTime"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:hint="Enter Input"
@@ -52,7 +52,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Spinner
-            android:id="@+id/SpinnerInputTemperature"
+            android:id="@+id/SpinnerInputTime"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_output_Temperature"
+        android:id="@+id/linearLayout_output_Time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
@@ -68,21 +68,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout_Input_Temperature">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_Input_Time">
 
         <TextView
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="0.0"
-            android:id="@+id/TV_Output_Temperature"
+            android:id="@+id/TV_Output_Time"
             android:background="@drawable/border"
             android:padding="10dp"
             android:textAlignment="gravity"
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/SpinnerOutputTemperature"
+            android:id="@+id/SpinnerOutputTime"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
@@ -90,7 +90,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/BTN_ConvertTemperature"
+        android:id="@+id/BTN_ConvertTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -101,6 +101,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_output_Temperature" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_output_Time" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
